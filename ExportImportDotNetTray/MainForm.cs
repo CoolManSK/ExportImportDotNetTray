@@ -120,11 +120,11 @@ namespace ExportImportDotNetTray
                             {
                                 try
                                 {
-                                    File.Replace(actFile, newFilePath, null);
+                                    File.Delete(actFile);
                                 }
                                 catch
                                 {
-                                    Application.Exit();
+                                    //Application.Exit();
                                 }
                             }
                             else
@@ -135,7 +135,7 @@ namespace ExportImportDotNetTray
                                 }
                                 catch
                                 {
-                                    Application.Exit();
+                                    //Application.Exit();
                                 }
                             }
                         }
@@ -1053,5 +1053,23 @@ namespace ExportImportDotNetTray
                 this.TrayIcon.ShowBalloonTip(2000);
             }
         }
+
+        /*
+        private void LogToFile(String FileName)
+        {
+            String LogFilePath = @"\\dcafs3\share\Manufacturing_Engineering\Public\Kolman Vladimir\ErrorLogDir\ExportImport\";
+            String LogFileName = String.Concat("ErrorLogFile_", Environment.MachineName, "_", DateTime.Now.Year.ToString(), DateTime.Now.Month.ToString("D2"), DateTime.Now.Day.ToString("D2"), ".txt");
+            StreamWriter sw;
+            if (!File.Exists(String.Concat(LogFilePath, LogFileName)))
+            {
+                FileStream fs = File.Create(String.Concat(LogFilePath, LogFileName));
+                sw = fs.
+            }
+            else
+            {
+                sw = File.AppendText(String.Concat(LogFilePath, LogFileName));
+            }
+        }
+        */
     }
 }

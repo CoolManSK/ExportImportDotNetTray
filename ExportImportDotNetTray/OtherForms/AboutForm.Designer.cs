@@ -41,7 +41,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(411, 47);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ExportImport .NET v.1.1ab";
+            this.label1.Text = "ExportImport .NET v.1.3";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // btn_OK
